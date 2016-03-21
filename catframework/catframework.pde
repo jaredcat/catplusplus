@@ -58,7 +58,7 @@ Cat find(String name) {
   Cat result = null;
   for (Cat cat : cats) {
     println("check " + cat.name);
-    if (cat.name.equals(name)) {
+    if (cat.name.toLowerCase().equals(name.toLowerCase())) {
       result = cat;
       break;
     }
@@ -115,7 +115,8 @@ String _cat(String[] tokens) {
   if (tokens.length > 1) {
     String name = tokens[1];
     if (find(name) != null) {
-      result = name + " is already here.";
+      Cat cat = find(name);
+      result = cat.name + " is already here.";
     }
     else {
       cats.add(new Cat(name));
@@ -147,7 +148,7 @@ String _coat(String[] tokens) {
           cat.loadGif("cat2.gif");  //
           break;
         }
-      result = name + " has a new look.";
+      result = cat.name + " has a new look.";
 
     }
   }
@@ -176,7 +177,7 @@ String _action(String[] tokens) {
         cat.loadGif("cat-fight.gif");  // Does not execute
           break;
       }
-      result = name + "is now " + tokens[2] + "ing.";
+      result = cat.name + " is now " + tokens[2] + "ing.";
     }
   }
   else {
