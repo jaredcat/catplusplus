@@ -1,12 +1,12 @@
-## Libaries Included
+## Libaries Included (=･ｪ･=?
 * gifAnimation
 * mesh
 * oscP5
 
-## Prerequisits
+## Prerequisits (=ＴェＴ=)
 * [Processing](https://processing.org/download/)
 
-## Installation
+## Installation (^=˃ᆺ˂)
 1. Copy `libraries` folder to your Sketchbook
   1. `File > Preferences > Sketchbook location`
 2. (Optional) Copy `catframework` folder to your Sketchbook
@@ -14,7 +14,7 @@
   1. `File > Sketchbook > catframework`
   2. Running `catframewrk.pde` directly
   
-## Instructions
+## Instructions (=^･^=)
 1. Run sketch
 2. `cat <name>` creates a new cat
 2. `coat <name> <siamese|tabby>` changes the type of cat
