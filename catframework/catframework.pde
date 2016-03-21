@@ -141,13 +141,16 @@ String _coat(String[] tokens) {
     else {
       Cat cat = find(name);
       switch(tokens[2]) {
+      case "default":
+        cat.loadGif("cat.gif");  // Does not execute
+        break;
       case "tabby":
         cat.loadGif("cat3.gif");  // Does not execute
-          break;
-        case "siamese":
-          cat.loadGif("cat2.gif");  //
-          break;
-        }
+        break;
+      case "siamese":
+        cat.loadGif("cat2.gif");  //
+        break;
+      }
       result = cat.name + " has a new look.";
 
     }
@@ -172,12 +175,28 @@ String _action(String[] tokens) {
       switch(tokens[2]) {
       case "eat":
         cat.loadGif("cat-eating.gif");  // Does not execute
-          break;
+        result = cat.name + " is now " + tokens[2] + "ing.";
+        break;
       case "fight":
         cat.loadGif("cat-fight.gif");  // Does not execute
-          break;
+        result = cat.name + " is now " + tokens[2] + "ing.";
+        break;
+      case "heat":
+        cat.loadGif("cat-heat.gif");  // Does not execute
+        result = cat.name + " is now in" + tokens[2];
+        break;
+      case "knead":
+        cat.loadGif("cat-kneading.gif");  // Does not execute
+        result = cat.name + " is now " + tokens[2] + "ing.";
+        break;
+      case "sleep":
+        cat.loadGif("cat-sleeping.gif");  // Does not execute
+        result = cat.name + " is now " + tokens[2] + "ing.";
+        break;
+      default:
+        result = "No matching action found.";
+        break;
       }
-      result = cat.name + " is now " + tokens[2] + "ing.";
     }
   }
   else {
